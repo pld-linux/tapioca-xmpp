@@ -1,12 +1,11 @@
 # TODO: real desc
-######		Unknown group!
 Summary:	Tapioca - VoIP framework
 Summary(pl):	Tapioca - szkielet VoIP
 Name:		tapioca-xmpp
 Version:	0.3.9
 Release:	1
 License:	LGPL
-Group:		Networking/Instant messaging
+Group:		Networking
 Source0:	http://dl.sourceforge.net/tapioca-voip/%{name}-%{version}.tar.gz
 # Source0-md5:	8d810351eb5b30e70b202e067da450c1
 Patch0:		%{name}-doxygen.patch
