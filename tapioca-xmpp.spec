@@ -1,4 +1,5 @@
 # TODO: real desc
+######		Unknown group!
 Summary:	Tapioca - VoIP framework
 Summary(pl):	Tapioca - szkielet VoIP
 Name:		tapioca-xmpp
@@ -18,9 +19,10 @@ BuildRequires:	glib2-devel >= 2.0
 BuildRequires:	libjingle-devel >= 0.3
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
+BuildRequires:	sed >= 4.0
 BuildRequires:	tapioca-libs-devel >= 0.3
 Requires:	tapioca >= 0.3
-Buildroot:	%{_tmppath}/%{name}-buildroot 
+Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Tapioca is a framework for Voice over IP (VoIP) and Instant Messaging
@@ -41,7 +43,9 @@ przeno¶nych.
 %setup -q
 %patch0 -p0
 
-perl -pi -e "s|/lib\b|/%{_lib}|g" configure.ac
+%if "%{_lib}" != "lib"
+%{__sed} -i -e 's|/lib|/%{_lib}|g' configure.ac
+%endif
 
 %build
 rm -rf autom4te.cache
@@ -63,7 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(644, root, root, 755)
+%defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/dbus-1/services/org.tapioca.Xmpp.service
