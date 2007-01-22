@@ -10,16 +10,16 @@ Source0:	http://dl.sourceforge.net/tapioca-voip/%{name}-%{version}.tar.gz
 # Source0-md5:	8d810351eb5b30e70b202e067da450c1
 Patch0:		%{name}-doxygen.patch
 URL:		http://sourceforge.net/projects/tapioca-voip/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	dbus-devel >= 0.36
 BuildRequires:	dbus-glib-devel >= 0.36
-BuildRequires:	glib2-devel
-BuildRequires:	libjingle-devel
+BuildRequires:	glib2-devel >= 2.0
+BuildRequires:	libjingle-devel >= 0.3
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-BuildRequires:	tapioca-libs-devel
-Requires:	tapioca
+BuildRequires:	tapioca-libs-devel >= 0.3
+Requires:	tapioca >= 0.3
 Buildroot:	%{_tmppath}/%{name}-buildroot 
 
 %description
@@ -41,7 +41,7 @@ przeno¶nych.
 %setup -q
 %patch0 -p0
 
-perl -pi -e "s|/lib\b|/%{_lib}|g" configure.*
+perl -pi -e "s|/lib\b|/%{_lib}|g" configure.ac
 
 %build
 rm -rf autom4te.cache
@@ -64,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644, root, root, 755)
-%doc AUTHORS COPYING ChangeLog README
+%doc AUTHORS ChangeLog README
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/dbus-1/services/org.tapioca.Xmpp.service
 %{_datadir}/tapioca-0.3/xmpp.ini
