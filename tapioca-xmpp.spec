@@ -1,6 +1,6 @@
 # TODO: real desc
 Summary:	Tapioca - VoIP framework
-Summary(pl):	Tapioca - szkielet VoIP
+Summary(pl.UTF-8):   Tapioca - szkielet VoIP
 Name:		tapioca-xmpp
 Version:	0.3.9
 Release:	1
@@ -30,13 +30,13 @@ VoIP and IM services in any kind of application. It was designed to be
 cross-platform, lightweight, thread-safe, having mobile devices and
 applications in mind.
 
-%description -l pl
+%description -l pl.UTF-8
 Tapioca to szkielet do VoIP (Voice over IP) i IM (Instant Messaging,
-czyli komunikatorÛw). G≥Ûwnym jego celem jest zapewnienie ≥atwego
-sposobu tworzenia i uøywania us≥ug VoIP i IM w dowolnym rodzaju
-aplikacji. Zosta≥ zaprojektowany jako wieloplatformowy, lekki,
-bezpieczny dla w±tkÛw, a takøe z my∂l± o urz±dzeniach i aplikacjach
-przeno∂nych.
+czyli komunikator√≥w). G≈Ç√≥wnym jego celem jest zapewnienie ≈Çatwego
+sposobu tworzenia i u≈ºywania us≈Çug VoIP i IM w dowolnym rodzaju
+aplikacji. Zosta≈Ç zaprojektowany jako wieloplatformowy, lekki,
+bezpieczny dla wƒÖtk√≥w, a tak≈ºe z my≈õlƒÖ o urzƒÖdzeniach i aplikacjach
+przeno≈õnych.
 
 %prep
 %setup -q
