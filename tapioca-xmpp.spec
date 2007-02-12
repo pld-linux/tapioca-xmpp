@@ -1,6 +1,6 @@
 # TODO: real desc
 Summary:	Tapioca - VoIP framework
-Summary(pl.UTF-8):   Tapioca - szkielet VoIP
+Summary(pl.UTF-8):	Tapioca - szkielet VoIP
 Name:		tapioca-xmpp
 Version:	0.3.9
 Release:	1
