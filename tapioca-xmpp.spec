@@ -21,7 +21,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	sed >= 4.0
 BuildRequires:	tapioca-libs-devel >= 0.3
 Requires:	tapioca >= 0.3
-Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Tapioca is a framework for Voice over IP (VoIP) and Instant Messaging
